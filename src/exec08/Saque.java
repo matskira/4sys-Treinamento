@@ -3,7 +3,7 @@ package exec08;
  * caixa eletronico saque
  * 
  * @author matskira
- * 
+ * 16/02/2020
  * @version 0.3
  */
 import javax.swing.JOptionPane;
@@ -26,7 +26,7 @@ public class Saque {
 			int ValorSacado = valor;
 			
 			String Message = "";
-			if((ValorSacado % 2 == 0) || (ValorSacado % 5 == 0)) {
+			if((ValorSacado % 2 == 0) || (ValorSacado % 5 == 0) || (ValorSacado != 0)) {
 				while (ValorSacado >= 50)
 				{
 					ValorSacado = ValorSacado - 50;
