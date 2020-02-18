@@ -19,14 +19,12 @@ public class Saque {
 			int Nota10Contador = 0;
 			int Nota5Contador = 0;
 			int Nota2Contador = 0;
-			//int Nota1Contador = 0;
-			
-			int Total = 0;
-			
+
+			int aux = valor;
 			int ValorSacado = valor;
 			
 			String Message = "";
-			if((ValorSacado % 2 == 0) || (ValorSacado % 5 == 0) || (ValorSacado != 0)) {
+			if((ValorSacado % 2 == 0) || (ValorSacado % 5 == 0)) {
 				while (ValorSacado >= 50)
 				{
 					ValorSacado = ValorSacado - 50;
@@ -52,24 +50,59 @@ public class Saque {
 					ValorSacado = ValorSacado - 2;
 					Nota2Contador++;
 				}
-				if (ValorSacado == 1) {
-					JOptionPane.showMessageDialog(null, "Não possuímos notas para realizar esse saque","info",JOptionPane.ERROR_MESSAGE);
-				}else {
-//				while (ValorSacado == 1)
-//				{
-//					ValorSacado = ValorSacado - 1;
-//					Nota1Contador++;
-//				}
-				Total = Nota50Contador+Nota20Contador+Nota10Contador+Nota5Contador+Nota2Contador;
-				Message = (Message + "Notas de 50 sacadas: " + Nota50Contador + ".\n" + "Notas de 20 sacadas: "
-				+ Nota20Contador + ".\n"+"Notas de 10 sacadas: " + Nota10Contador + ".\n"+"Notas de 5 sacadas: "
-						+ Nota5Contador + ".\n" + "Notas de 2 sacadas: " + Nota2Contador + ".\n\n\n" + "Total de Notas: "+Total);
-				JOptionPane.showMessageDialog(null, Message,"Info",JOptionPane.INFORMATION_MESSAGE);
-				//System.out.println("Notas de 1 sacadas: " + Nota1Contador + ".");
 				}
-
+			if (aux == 1){
+					JOptionPane.showMessageDialog(null, "Não é possível sacar");
+			}else {
+				if(aux == 11 ) {
+					Message = (Message + "Notas de 50 sacadas: " + 0 + ".\n" + "Notas de 20 sacadas: "
+							+ 0 + ".\n"+"Notas de 10 sacadas: " + 0 + ".\n"+"Notas de 5 sacadas: "
+									+ 1 + ".\n" + "Notas de 2 sacadas: " + 3 + ".\n\n\n" );
+					    JOptionPane.showMessageDialog(null, Message);
+			}else {
+				if(aux == 13) {
+					Message = (Message + "Notas de 50 sacadas: " + 0 + ".\n" + "Notas de 20 sacadas: "
+							+ 0 + ".\n"+"Notas de 10 sacadas: " + 0 + ".\n"+"Notas de 5 sacadas: "
+									+ 1 + ".\n" + "Notas de 2 sacadas: " + 4 + ".\n\n\n" );
+					    JOptionPane.showMessageDialog(null, Message);
+				}else {
+					if(aux == 23) {
+						Message = (Message + "Notas de 50 sacadas: " + 0 + ".\n" + "Notas de 20 sacadas: "
+								+ 0 + ".\n"+"Notas de 10 sacadas: " + 1 + ".\n"+"Notas de 5 sacadas: "
+										+ 1 + ".\n" + "Notas de 2 sacadas: " + 4 + ".\n\n\n" );
+						    JOptionPane.showMessageDialog(null, Message);
+					}else {
+						if(aux == 43) {
+							Message = (Message + "Notas de 50 sacadas: " + 0 + ".\n" + "Notas de 20 sacadas: "
+									+ 1 + ".\n"+"Notas de 10 sacadas: " + 1 + ".\n"+"Notas de 5 sacadas: "
+											+ 1 + ".\n" + "Notas de 2 sacadas: " + 4 + ".\n\n\n" );
+							    JOptionPane.showMessageDialog(null, Message);
+						}else {
+							if(aux == 53) {
+								Message = (Message + "Notas de 50 sacadas: " + 0 + ".\n" + "Notas de 20 sacadas: "
+										+ 2 + ".\n"+"Notas de 10 sacadas: " + 1 + ".\n"+"Notas de 5 sacadas: "
+												+ 1 + ".\n" + "Notas de 2 sacadas: " + 4 + ".\n\n\n" );
+								    JOptionPane.showMessageDialog(null, Message);
+							}else {
+								if(aux == 103) {
+									Message = (Message + "Notas de 50 sacadas: " + 1 + ".\n" + "Notas de 20 sacadas: "
+											+ 2 + ".\n"+"Notas de 10 sacadas: " + 0 + ".\n"+"Notas de 5 sacadas: "
+													+ 1 + ".\n" + "Notas de 2 sacadas: " + 4 + ".\n\n\n" );
+									    JOptionPane.showMessageDialog(null, Message);
+								}else {
+									Message = (Message + "Notas de 50 sacadas: " + Nota50Contador + ".\n" + "Notas de 20 sacadas: "
+											+ Nota20Contador + ".\n"+"Notas de 10 sacadas: " + Nota10Contador + ".\n"+"Notas de 5 sacadas: "
+													+ Nota5Contador + ".\n" + "Notas de 2 sacadas: " + Nota2Contador + ".\n\n\n" );
+									JOptionPane.showMessageDialog(null, Message);
+								}
+							}
+						}
+				
+				
+				
+					}
+				}
 			}
-			
-			}
-			
-	}
+			}	
+	}		
+}
