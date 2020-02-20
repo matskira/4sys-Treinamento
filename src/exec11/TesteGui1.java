@@ -1,5 +1,8 @@
 package exec11;
-
+/**
+ * Primeira tela
+ * @author mpoda
+ */
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
